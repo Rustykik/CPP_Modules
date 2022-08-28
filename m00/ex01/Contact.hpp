@@ -11,7 +11,6 @@ class Contact {
 
 		bool set_info(int index);
 		bool compare();
-		void print_fields();
 		void print_contact();
 		void print_full_contact();
 	

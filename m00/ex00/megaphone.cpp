@@ -9,13 +9,11 @@ int main(int argc, char const *argv[]) {
 	else {
 		for (int i = 1; i < argc; ++i) {
 			std::string str = argv[i];
-			for (int i = 0; i < str.length(); ++i)
-			{
+			for (int i = 0; i < str.length(); ++i) {
 				std::cout << (char)std::toupper(str[i]);
 			}
 		}
 	}
 	std::cout << "\n";
 	return 0;
-
 }

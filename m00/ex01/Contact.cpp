@@ -9,7 +9,7 @@ std::string Contact::field_names[5] = {
 };
 
 Contact::Contact() {
-	for (size_t i = 0; i <= 4; i++) {
+	for (size_t i = 0; i < 5; ++i) {
         this->field_values[i] = std::string();
     }
 }
@@ -18,15 +18,15 @@ Contact::~Contact() {}
 
 bool Contact::set_info(int index) {
     this->index = index;
-    for (size_t i = 0; i <= 4; ++i) {
-        std::cout << "$ " << Contact::field_names[i] << ": ";
+    for (size_t i = 0; i < 5; ++i) {
+        std::cout << "> " << Contact::field_names[i] << ": ";
         std::getline(std::cin, this->field_values[i]);
     }
-    for (size_t i = 0; i <= 4; ++i) {
-        if (this->field_values[i].length() == 0)
-        {
-            for (size_t i = 0; i <= 4; i++)
+    for (size_t i = 0; i < 5; ++i) {
+        if (this->field_values[i].length() == 0) {
+            for (size_t i = 0; i < 5; ++i) {
                 this->field_values[i] = std::string();
+			}
             return (false);
         }
     }
@@ -35,7 +35,7 @@ bool Contact::set_info(int index) {
 
 void Contact::print_contact() {
     std::cout << "|" << std::setw(10) << this->index;
-    for (size_t i = 0; i <= 2; i++)
+    for (size_t i = 0; i < 3; ++i)
     {
         std::cout << "|";
         if (this->field_values[i].length() > 10)
@@ -51,7 +51,7 @@ void Contact::print_full_contact() {
 		std::cout << "invalid index" << std::endl;
 		return ;
 	}
-	for (int i = 0; i <= 4; ++i) {
+	for (int i = 0; i < 5; ++i) {
 		std::cout << this->field_names[i] << " : " << this->field_values[i] << std::endl;
 	}
 }

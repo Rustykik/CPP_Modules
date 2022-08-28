@@ -17,6 +17,5 @@ class PhoneBook {
 		~PhoneBook();
 
 		void add(void);
-		void print(int index);
 		void search(void);
 };

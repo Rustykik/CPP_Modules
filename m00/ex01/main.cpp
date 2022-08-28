@@ -16,7 +16,7 @@ int	main(void)
 		else if (cmd == "EXIT")
 			break;
 		else
-			std::cout << cmd << " is not a comand\n";
+			std::cout << cmd << "> is not a comand\n";
 	}
 	return (0);
 }
