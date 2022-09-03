@@ -1,8 +1,8 @@
 NAME = main
 
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC = main.cpp Harl.cpp
 
-HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
+HEADER = Harl.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -31,4 +31,8 @@ re: fclean all
 run: all
 	@./$(NAME)
 
-.PHONY: all clean fclean re run
+test: all
+	./$(NAME)
+	@make fclean
+
+.PHONY: all clean fclean re run test

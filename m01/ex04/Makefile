@@ -1,8 +1,8 @@
 NAME = main
 
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC = main.cpp
 
-HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
+HEADER = 
 
 OBJ = $(SRC:.cpp=.o)
 
