@@ -1,6 +1,0 @@
-*.o
-.idea
-/*/.vscode
-.gitignore
-*.vscode
-!*.*
